@@ -50,8 +50,7 @@ simplefloatfmt_ftoa(char *s, size_t n, float f, size_t nfracdigits)
     frac = modff(f, &intg);
 
     iintg = (int) intg;
-    ifrac = (int) (frac * pow(10, nfracdigits)); /* Hack */
-
+    ifrac = (int) round(frac * pow(10, nfracdigits)); /* Hack */
 
     if (sign) {
         if (m < n && s)
