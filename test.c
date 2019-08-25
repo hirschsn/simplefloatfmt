@@ -25,9 +25,9 @@ void test(float v, size_t bufsiz, const char *expect)
 
 int main(void)
 {
-    test(5.2, 0, "5.19999");
+    test(5.2, 0, "5.20000");
     test(2., 0, "2.0");
-    test(-0.71, 0, "-0.70999");
+    test(-0.71, 0, "-0.71000");
     test(0, 0, "0.0");
     test(31.9, 3, "31"); /* truncation test */
 }
