@@ -1,3 +1,4 @@
+/* For license details see LICENSE */
 
 #include <string.h>
 #include <stdio.h>
