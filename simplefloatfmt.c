@@ -72,6 +72,10 @@ simplefloatfmt_ftoa(char *s, size_t n, float f, size_t nfracdigits)
     if (m < n && s)
         s += ret;
     m += ret;
+    /* Could potentially remove trailing 0s in the fractional part.
+     * However the memory requirement will not change because
+     * the current implementation of itos needs the 0s in order
+     * to swap correctly. */
 
     /* Terminator */
     if (m < n && s)
